@@ -16,7 +16,7 @@ fn main(){
   assert!(24 % 5 == 4);
   // Short-circuitting boolean logic
   assert!(true && false == false);
-  assert!(true || false == false);
+  assert!(true || false == true);
   assert!(!true == false);
 
   // Bitwise operations
