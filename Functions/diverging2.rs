@@ -8,7 +8,7 @@ fn main(){
     // Diverging functions can also be used in match expression to replace a val
     false => {
       println!("Success!");
-      panic!("We have no value for `false` but we can panic");
+      panic!("We have no value for `false` but we can panic"); 
     }
   };
 
