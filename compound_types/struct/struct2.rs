@@ -15,4 +15,4 @@ fn main() {
 } 
 
 // Fill the blank to make the code work
-fn do_something_with_unit(u: __) {   }
+fn do_something_with_unit(u: Unit) {   }
