@@ -14,5 +14,5 @@ fn main() {
     let _name = f.name;
 
     // ONLY modify this line
-    println!("{}, {}, {:?}",f.name, f.data, f);
+    println!("{}, {}",_name, f.data);
 } 
