@@ -22,6 +22,6 @@ fn main() {
 fn set_email(u: User) -> User {
   User {
       email: String::from("contact@im.dev"),
-      __
+      ..u
   }
 }
