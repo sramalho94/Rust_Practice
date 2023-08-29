@@ -10,6 +10,7 @@ fn main() {
   let p = Person {
       name: String::from("sunface"),
       age,
+      hobby: String::from("hobby")
   };
 
   println!("Success!");
