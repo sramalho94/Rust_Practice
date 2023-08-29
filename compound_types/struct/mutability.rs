@@ -6,7 +6,7 @@ struct Person {
 }
 fn main() {
   let age = 18;
-  let p = Person {
+  let mut p = Person {
       name: String::from("sunface"),
       age,
   };
@@ -15,7 +15,7 @@ fn main() {
   p.age = 30;
 
   // Fill the blank
-  __ = String::from("sunfei");
+  p.name = String::from("sunfei");
 
   println!("Success!");
 }
