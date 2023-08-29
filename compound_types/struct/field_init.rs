@@ -11,6 +11,6 @@ fn main() {
 fn build_person(name: String, age: u8) -> Person {
   Person {
       age,
-      __
+      name,
   }
 }
