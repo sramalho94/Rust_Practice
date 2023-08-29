@@ -8,8 +8,8 @@ enum Message {
 }
 
 fn main() {
-  let msg1 = Message::Move{__}; // Instantiating with x = 1, y = 2 
-  let msg2 = Message::Write(__); // Instantiating with "hello, world!"
+  let msg1 = Message::Move{x: 1, y: 2}; // Instantiating with x = 1, y = 2 
+  let msg2 = Message::Write(String::from("hello, world!")); // Instantiating with "hello, world!"
 
   println!("Success!");
 } 
