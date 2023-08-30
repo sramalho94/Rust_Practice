@@ -11,8 +11,8 @@ fn main() {
         data: "Rust By Practice".to_string()
     };
 
-    let _name = f.name;
+    let _name = f.name.clone();
 
     // ONLY modify this line
-    println!("{}, {}",_name, f.data);
+    println!("{}, {}, {:?}",_name, f.data, f);
 } 
