@@ -25,7 +25,7 @@ fn main() {
       }
   }
 
-  assert!(count == __);
+  assert!(count == 30);
 
   println!("Success!");
 }
