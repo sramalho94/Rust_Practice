@@ -7,7 +7,7 @@ fn match_number(n: i32) {
         // Match a single value
         1 => println!("One!"),
         // Fill in the blank with `|`, DON'T use `..` or `..=`
-        __ => println!("match 2 -> 5"),
+        2 | 3 | 4 | 5  => println!("match 2 -> 5"),
         // Match an inclusive range
         6..=10 => {
             println!("match 6 -> 10")
