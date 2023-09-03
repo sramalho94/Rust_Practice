@@ -7,8 +7,8 @@ struct TrafficLight {
 }
 
 impl TrafficLight {
-    pub fn show_state(__)  {
-        println!("the current state is {}", __.color);
+    pub fn show_state(self: &Self)  {
+        println!("the current state is {}", self.color);
     }
 }
 fn main() {
@@ -16,7 +16,7 @@ fn main() {
         color: "red".to_owned(),
     };
     // Don't take the ownership of `light` here.
-    light.show_state();
+    let _ = &light.show_state();
     // ... Otherwise, there will be an error below
     println!("{:?}", light);
 }
