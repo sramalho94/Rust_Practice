@@ -7,7 +7,9 @@ struct Rectangle {
 
 impl Rectangle {
   // Complete the area method which return the area of a Rectangle.
-  fn area
+  fn area(self) -> u32 {
+    self.width * self.height
+  }
 }
 
 fn main() {
