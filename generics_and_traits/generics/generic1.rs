@@ -14,15 +14,15 @@ fn generic<T>(_s: SGen<T>) {}
 
 fn main() {
     // Using the non-generic functions
-    reg_fn(__);          // Concrete type.
-    gen_spec_t(__);   // Implicitly specified type parameter `A`.
-    gen_spec_i32(__); // Implicitly specified type parameter `i32`.
+    reg_fn(S(A));          // Concrete type.
+    gen_spec_t(SGen(A));   // Implicitly specified type parameter `A`.
+    gen_spec_i32(SGen(7)); // Implicitly specified type parameter `i32`.
 
     // Explicitly specified type parameter `char` to `generic()`.
-    generic::<char>(__);
+    generic::<char>(SGen('A'));
 
     // Implicitly specified type parameter `char` to `generic()`.
-    generic(__);
+    generic(SGen('B'));
 
     println!("Success!");
 }
