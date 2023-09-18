@@ -1,6 +1,8 @@
 // A function call with explicitly specified type parameters looks like: fun::<A, B, ...>().
 // Implement the generic function below.
-fn sum
+fn sum<T: std::ops::Add<Output = T>>(a: T, b: T)-> T {
+    a + b
+}
 
 fn main() {
     assert_eq!(5, sum(2i8, 3i8));
