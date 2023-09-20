@@ -18,6 +18,7 @@ impl Inches {
 
 // ADD some attributes to make the code work!
 // DON'T modify other code!
+#[derive(Debug, PartialEq, PartialOrd)]
 struct Seconds(i32);
 
 fn main() {
@@ -31,7 +32,7 @@ fn main() {
 
     println!("One foot equals {:?}", foot);
 
-    let meter = Centimeters(100.0);
+    let meter: Centimeters = Centimeters(100.0);
 
     let cmp =
         if foot.to_centimeters() < meter {
