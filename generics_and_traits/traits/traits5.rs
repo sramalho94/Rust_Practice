@@ -42,8 +42,8 @@ fn main() {
       content: "Weibo seems to be worse than Tweet".to_string(),
   };
 
-  summary(post);
-  summary(weibo);
+  summary(&post);
+  summary(&weibo);
 
   println!("{:?}", post);
   println!("{:?}", weibo);
@@ -51,3 +51,8 @@ fn main() {
 
 // Implement `fn summary` below.
 
+fn summary(a: &impl Summary){
+  let output: String = a.summarize();
+
+  println!("{}", output);
+}
