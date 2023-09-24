@@ -3,10 +3,12 @@
 // When working with generics, the type parameters often must use traits as bounds to stipulate what functionality a type implements.
 fn main() {
   assert_eq!(sum(1, 2), 3);
+
+  println!("{}", sum(5,5));
 }
 
 // Implement `fn sum` with trait bound in two ways.
-fn sum<T>(x: T, y: T) -> T {
+fn sum<T: std::ops::Add<Output = T>>(x: T, y: T) -> T {
   x + y
 }
 
