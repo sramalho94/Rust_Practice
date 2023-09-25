@@ -14,7 +14,7 @@ impl<T> Pair<T> {
   }
 }
 
-impl<T: std::fmt::Debug + PartialOrd> Pair<T> {
+impl<T: std::fmt::Debug + PartialOrd + PartialEq> Pair<T> {
   fn cmp_display(&self) {
       if self.x >= self.y {
           println!("The largest member is x = {:?}", self.x);
@@ -24,13 +24,16 @@ impl<T: std::fmt::Debug + PartialOrd> Pair<T> {
   }
 }
 
+#[derive(Debug, PartialOrd, PartialEq)]
 struct Unit(i32);
 
 fn main() {
-  let pair = Pair{
-      x: Unit(1),
-      y: Unit(3)
-  };
+  // let pair: Pair<Unit> = Pair{
+  //     x: Unit(1),
+  //     y: Unit(3)
+  // };
+
+  let pair: Pair<Unit> = Pair::new(Unit(1), Unit(2));
 
   pair.cmp_display();
 }
