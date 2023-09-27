@@ -29,7 +29,7 @@ impl Bird for Swan {
 
 fn main() {
   // FILL in the blank to make the code work.
-  let birds __;
+  let birds: [&dyn Bird; 2] = [&Duck, &Swan];
 
   for bird in birds {
       bird.quack();
