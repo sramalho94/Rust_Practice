@@ -6,22 +6,22 @@ trait Draw {
 
 impl Draw for u8 {
   fn draw(&self) -> String {
-      format!("u8: {}", *self)
+      format!("u8: {}", self)
   }
 }
 
 impl Draw for f64 {
   fn draw(&self) -> String {
-      format!("f64: {}", *self)
+      format!("f64: {}", self)
   }
 }
 
 fn main() {
-  let x = 1.1f64;
-  let y = 8u8;
+  let x: f64 = 1.1f64;
+  let y: u8 = 8u8;
 
   // Draw x.
-  draw_with_box(__);
+  draw_with_box(Box::new(x));
 
   // Draw y.
   draw_with_ref(&y);
@@ -33,6 +33,6 @@ fn draw_with_box(x: Box<dyn Draw>) {
   x.draw();
 }
 
-fn draw_with_ref(x: __) {
+fn draw_with_ref(x: &dyn Draw) {
   x.draw();
 }
