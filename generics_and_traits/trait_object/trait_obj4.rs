@@ -12,14 +12,18 @@ impl Foo for String {
 }
 
 // IMPLEMENT below with generics.
-fn static_dispatch...
+fn static_dispatch<T: Foo>(a: T) {
+  a.method();
+}
 
 // Implement below with trait objects.
-fn dynamic_dispatch...
+fn dynamic_dispatch(a: &dyn Foo) {
+  a.method();
+}
 
 fn main() {
-  let x = 5u8;
-  let y = "Hello".to_string();
+  let x: u8 = 5u8;
+  let y: String = "Hello".to_string();
 
   static_dispatch(x);
   dynamic_dispatch(&y);
