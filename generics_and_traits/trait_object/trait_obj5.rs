@@ -13,8 +13,8 @@ impl MyTrait for String {
   fn f(&self) -> Self { self.clone() }
 }
 
-fn my_function<T: MyTrait>(x: T)  {
-  x.f();
+fn my_function<T: MyTrait>(x: T) -> T  {
+  x.f()
 }
 
 fn main() {
