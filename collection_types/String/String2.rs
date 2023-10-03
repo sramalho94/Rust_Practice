@@ -4,15 +4,15 @@
 
 // FILL in the blanks
 fn main() {  
-  let mut s = String::from("hello, world");
+  let mut s: String = String::from("hello, world");
 
-  let slice1: &str = __; // In two ways
+  let slice1: &str = &s; // or s.as_str()
   assert_eq!(slice1, "hello, world");
 
-  let slice2 = __;
+  let slice2: &str = &s[..=4];
   assert_eq!(slice2, "hello");
 
-  let slice3: __ = __; 
+  let slice3: &mut String = &mut s; 
   slice3.push('!');
   assert_eq!(slice3, "hello, world!");
 
