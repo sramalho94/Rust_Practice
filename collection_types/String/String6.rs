@@ -8,7 +8,7 @@ The pointer points to an internal buffer String uses to store its data. The leng
 // 25
 // Here, there’s no need to allocate more memory inside the loop.
 fn main() {
-  let mut s: String = String::new();
+  let mut s: String = String::with_capacity(25);
 
   println!("{}", s.capacity());
 
