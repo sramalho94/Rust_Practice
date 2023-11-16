@@ -4,12 +4,12 @@ In Rust, it’s more common to pass slices as arguments rather than vectors when
 
 // FIX the errors
 fn main() {
-  let mut v = vec![1, 2, 3];
+  let mut v: Vec<i32> = vec![1, 2, 3];
 
-  let slice1 = &v[..];
+  let slice1: &[i32] = &v[..];
   // Out of bounds will cause a panic
   // You must use `v.len` here
-  let slice2 = &v[0..4];
+  let slice2: &[i32] = &v[0..v.len()];
   
   assert_eq!(slice1, slice2);
   
@@ -17,8 +17,7 @@ fn main() {
   // Note: slice and &Vec are different
   let vec_ref: &mut Vec<i32> = &mut v;
   (*vec_ref).push(4);
-  let slice3 = &mut v[0..3];
-  slice3.push(4);
+  let slice3: &[i32] = &v[0..];
 
   assert_eq!(slice3, &[1, 2, 3, 4]);
 
