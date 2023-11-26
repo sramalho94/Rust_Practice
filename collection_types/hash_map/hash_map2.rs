@@ -16,6 +16,8 @@ fn main() {
     // Tips: one of the approaches is to use `collect` method
     let teams_map2: HashMap<&str, i32> = HashMap::from(teams);
 
+    let teams_map3: HashMap<&str, i32> = teams.iter().map(|&(k, v)| (k, v)).collect();
+
     assert_eq!(teams_map1, teams_map2);
 
     println!("Success!");
